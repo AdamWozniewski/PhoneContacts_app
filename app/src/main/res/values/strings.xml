@@ -1,0 +1,33 @@
+<resources>
+    <string name="app_name">PhoneContacts_app</string>
+    <string name="action_settings">Settings</string>
+    <string name="button_cancel">Anuluj</string>
+    <string name="button_delete">Usuń</string>
+    <string name="confirm_message">Kontakt zostanie nieodwracalnie usunięty</string>
+    <string name="confirm_title">Na pewno?</string>
+    <string name="contact_added">Kontakt został dodany</string>
+    <string name="contact_not_added">Błąd dodawania kontaktu</string>
+    <string name="contact_not_updated">Błąd aktualizacji kontaktu</string>
+    <string name="contact_updated">Kontakt został zaktualizowany</string>
+    <string name="hint_city">Miasto</string>
+    <string name="hint_email">E-mail</string>
+    <string name="hint_name_required">Nazwa (wymagane)</string>
+    <string name="hint_phone">Telefon</string>
+    <string name="hint_state">Kraj</string>
+    <string name="hint_street">Ulica</string>
+    <string name="hint_zip">Kod pocztowy</string>
+    <string name="insert_failed">Błąd wstawiania:</string>
+    <string name="invalid_delete_uri">Błąd kasowania - identyfikator Uri:</string>
+    <string name="invalid_insert_uri">Błąd wstawiania - identyfikator Uri:</string>
+    <string name="invalid_query_uri">Błąd zapytania - identyfikator Uri:</string>
+    <string name="invalid_update_uri">Błąd aktualizacji - identyfikator Uri:</string>
+    <string name="label_city">Miasto</string>
+    <string name="label_email">E-mail</string>
+    <string name="label_name">Nazwa</string>
+    <string name="label_phone">Telefon</string>
+    <string name="label_state">Kraj</string>
+    <string name="label_street">Ulica</string>
+    <string name="label_zip">Kod pocztowy</string>
+    <string name="menuitem_delete">Kasuj</string>
+    <string name="menuitem_edit">Edytuj</string>
+</resources>

@@ -1,0 +1,6 @@
+<resources>
+    <dimen name="fab_margin">16dp</dimen>
+    <dimen name="activityVerticalMargin">16dp</dimen>
+    <dimen name="activityHorizontalMargin">16dp</dimen>
+    <dimen name="dividerMargin">16dp</dimen>
+</resources>
