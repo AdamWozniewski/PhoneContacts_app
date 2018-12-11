@@ -2,6 +2,7 @@ package com.adam.phonecontacts_app;
 
 import android.app.AlertDialog;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.database.Cursor;
 import android.net.Uri;
 import android.os.Bundle;
@@ -121,10 +122,13 @@ public class DetailFragment extends Fragment implements LoaderManager.LoaderCall
         AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
         builder.setTitle(R.string.confirm_title);
         builder.setMessage(R.string.confirm_message);
-//        builder.setPositiveButton(R.string.button_delete, onClick(dialog, which) -> { <- poprawka
-//            getActivity().getContentResolver().delete(this.contactUri, null, null);
-//            this.listener.onContactDeleted();
-//        });
+        builder.setPositiveButton(R.string.button_delete, new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                getActivity().getContentResolver().delete(DetailFragment.this.contactUri, null, null);
+                DetailFragment.this.listener.onContactDeleted();
+            }
+        });
         builder.setNegativeButton(R.string.button_cancel, null);
 
         // Wyświtlanie zdefiniowanego okna dialogowego

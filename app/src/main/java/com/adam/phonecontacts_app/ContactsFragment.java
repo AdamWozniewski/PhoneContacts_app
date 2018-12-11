@@ -103,13 +103,13 @@ public class ContactsFragment extends Fragment implements LoaderManager.LoaderCa
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
         getLoaderManager().initLoader(
-                ContactsFragment.CONTACTS_LOADER,
+                0,
                 null,
-                (android.support.v4.app.LoaderManager.LoaderCallbacks<Object>) this
+                (android.support.v4.app.LoaderManager.LoaderCallbacks<ContactsFragment>) this
         );
     }
 
-    public void publicContactList() {
+    public void updateContactList() {
         this.contactsAdapter.notifyDataSetChanged();
     }
 

@@ -108,12 +108,13 @@ public class AddEditFragment extends Fragment implements LoaderManager.LoaderCal
             @Override
             public void onClick(View v) {
                 // Ukrycie klawiatury ekranowej
-                ((InputMethodManager) getActivity().getSystemService(Context.INPUT_METHOD_SERVICE)).hideSoftInputFromInputMethod(getView().getWindowToken(), 0));
+                ((InputMethodManager) getActivity().getSystemService(Context.INPUT_METHOD_SERVICE)).hideSoftInputFromInputMethod(getView().getWindowToken(), 0);
 
                 // Zapisanie kontaktu w bazie danych
                 AddEditFragment.this.saveContact();
             }
         });
+        this.updateSaveButtonFAB();
 
         // Kod używany do wyświetlania obiektów SnackBar
         this.coordinatorLayout = (CoordinatorLayout) getActivity().findViewById(R.id.coordinatorLayout);
