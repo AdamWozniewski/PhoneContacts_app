@@ -21,8 +21,8 @@ public class AddressBookDatabaseHelper extends SQLiteOpenHelper {
         // Zapytanie SQL tworzące tabelę w bazie danych
 
         final String CREATE_CONTACTS_TABLE =
-                "CREATE TABLE" + DatabaseDescription.Contact.TABLE_NAME +
-                        "(" + DatabaseDescription.Contact._ID + "integer primary key, " +
+                "CREATE TABLE " + DatabaseDescription.Contact.TABLE_NAME +
+                        "(" + DatabaseDescription.Contact._ID + " integer primary key, " +
                         DatabaseDescription.Contact.COLUMN_NAME + "TEXT, " +
                         DatabaseDescription.Contact.COLUMN_PHONE + "TEXT, " +
                         DatabaseDescription.Contact.COLUMN_EMAIL + "TEXT, " +

@@ -102,10 +102,10 @@ public class ContactsFragment extends Fragment implements LoaderManager.LoaderCa
     @Override
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
-        getLoaderManager().initLoader(
-                0,
+        getActivity().getLoaderManager().initLoader(
+                ContactsFragment.CONTACTS_LOADER,
                 null,
-                (android.support.v4.app.LoaderManager.LoaderCallbacks<ContactsFragment>) this
+                this
         );
     }
 
