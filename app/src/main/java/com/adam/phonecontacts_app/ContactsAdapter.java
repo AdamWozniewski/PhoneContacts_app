@@ -30,7 +30,7 @@ public class ContactsAdapter extends RecyclerView.Adapter<ContactsAdapter.ViewHo
             super(view);
 
             // Inicjalizacja widoku TextView
-            textView = (TextView) view.findViewById(android.R.id.text1);
+            this.textView = (TextView) view.findViewById(android.R.id.text1);
 
             // Podłącz do obiektu View obiekt nasłuchujacy zdarzen
             view.setOnClickListener(new View.OnClickListener() {
@@ -60,21 +60,28 @@ public class ContactsAdapter extends RecyclerView.Adapter<ContactsAdapter.ViewHo
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup viewGroup, int i) {
         // Przygotowanie do wyświetlenie predefiniowanego widoku
-        View view = LayoutInflater.from(viewGroup.getContext()).inflate(android.R.layout.simple_list_item_1, viewGroup);
+        View view = LayoutInflater
+                .from(viewGroup.getContext())
+                .inflate(
+                        android.R.layout.simple_list_item_1,
+                        viewGroup,
+                        false
+                );
         return new ViewHolder(view);
     }
 
     // Określenie tekstu elementu listy
     @Override
-    public void onBindViewHolder(@NonNull ViewHolder viewHolder, int i) {
-        // Przeniesienie wybranego kontaktu w odpowiednie miejsce recycler view
-        this.cursor.moveToPosition(i);
+    public void onBindViewHolder(ViewHolder holder, int position) {
 
-        // Określenie identyfikatora rowId elementu ViewHolder
-        viewHolder.setRowId(this.cursor.getLong(this.cursor.getColumnIndex(DatabaseDescription.Contact._ID)));
+        /* Przeniesienie wybranego kontaktu w odpowiednie miejsce widoku RecyclerView */
+        this.cursor.moveToPosition(position);
 
-        // Ustawienie tekstu widoku Text elementu widoku Recycler View
-        viewHolder.textView.setText(this.cursor.getColumnIndex(DatabaseDescription.Contact.COLUMN_NAME));
+        /* Określenie identyfikatora rowID elementu ViewHolder */
+        holder.setRowId(this.cursor.getLong(this.cursor.getColumnIndex(DatabaseDescription.Contact._ID)));
+
+        /* Ustawienie tekstu widoku TextView elementu widoku RecyclerView */
+        holder.textView.setText(this.cursor.getString(this.cursor.getColumnIndex(DatabaseDescription.Contact.COLUMN_NAME)));
     }
 
     // Zwraca liczbę elementów wiązynch przez adapter

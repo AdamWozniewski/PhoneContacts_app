@@ -32,7 +32,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:id="@+id/editText2"
-                    android:hint="@string/hint_name_required"
+                    android:hint="@string/hint_phone"
                     android:imeOptions="actionNext"
                     android:inputType="phone"/>
             </android.support.design.widget.TextInputLayout>
@@ -45,7 +45,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:id="@+id/editText3"
-                    android:hint="@string/hint_name_required"
+                    android:hint="@string/hint_email"
                     android:imeOptions="actionNext"
                     android:inputType="textEmailAddress"/>
             </android.support.design.widget.TextInputLayout>
@@ -58,7 +58,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:id="@+id/editText4"
-                    android:hint="@string/hint_name_required"
+                    android:hint="@string/hint_street"
                     android:imeOptions="actionNext"
                     android:inputType="textCapWords|textPostalAddress"/>
             </android.support.design.widget.TextInputLayout>
@@ -71,7 +71,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:id="@+id/editText5"
-                    android:hint="@string/hint_name_required"
+                    android:hint="@string/hint_city"
                     android:imeOptions="actionNext"
                     android:inputType="textCapWords|textPostalAddress"/>
             </android.support.design.widget.TextInputLayout>
@@ -84,7 +84,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:id="@+id/editText6"
-                    android:hint="@string/hint_name_required"
+                    android:hint="@string/hint_state"
                     android:imeOptions="actionNext"
                     android:inputType="textPostalAddress|textCapCharacters"/>
             </android.support.design.widget.TextInputLayout>
@@ -97,7 +97,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:id="@+id/editText7"
-                    android:hint="@string/hint_name_required"
+                    android:hint="@string/hint_zip"
                     android:imeOptions="actionDone"
                     android:inputType="number"/>
             </android.support.design.widget.TextInputLayout>
