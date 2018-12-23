@@ -121,12 +121,11 @@ public class ContactsFragment extends Fragment implements LoaderManager.LoaderCa
             case CONTACTS_LOADER:
                 return new CursorLoader(
                         getActivity(),
-                        DatabaseDescription.Contact.CONTENT_URI, // Adres URI tabeli
-                        null, // zwraca wszystkie kolumny
-                        null, // zwraca wsyztskie wiersze
-                        null, // Brak argumentów selekcji
-                        DatabaseDescription.Contact.COLUMN_NAME + "COLLATE NOCASE ASC" // Kolejnosc sortowania
-                );
+                        DatabaseDescription.Contact.CONTENT_URI, // Adres URI tabeli kontaktów.
+                        null, // Wartość null zwraca wszystkie kolumny.
+                        null, // Wartość null zwraca wszystkie wiersze.
+                        null, // Brak argumentów selekcji.
+                        DatabaseDescription.Contact.COLUMN_NAME + " COLLATE NOCASE ASC"); // Kolejność sortowania.
             default:
                 return null;
         }
